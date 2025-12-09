@@ -1,0 +1,35 @@
+  INFORME DE DATOS
+	#version 1:
+		Se anadio:
+		* Menu principal.
+		* Menu de coneccion serial.
+		* Opciones de comunicacion.
+		* switch mode, asignacion de datos.
+
+	#version 2:
+		Se anadio:
+		* Pantalla de deslizadores.
+		* Pantalla de lectura (simple) y barra.
+		* Chat envio envio de datos.
+		* mejora del chat:lectura de datos,
+		  con historial de datos.
+		* Ventana de informacion.
+
+		Se corrigio o cambio:
+		- Check button de habilitar comunicacion,
+		  ahora esta bloqueado cuando no hay 
+		  dispositivos.
+		- Los botones tienen iconos (switch mode).
+		- Se arreglo asignacion de valores.
+		- Sistema de comunicacion mejorado, se 
+		  anadio modulo: arduinoConn y se implemento
+		  al modulo: conexion.
+	
+		  Nota: arduinoCon: contiene metodos de 
+		  conexion y desconexion, ademas demas de 
+		  agregar metodos de envio y lectura 
+		  de datos.
+
+	#version 3:
+		Se anadio:
+		
