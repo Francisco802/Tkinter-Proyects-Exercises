@@ -1,0 +1,65 @@
+import tkinter as tk
+from tkinter import ttk
+
+class ventana(tk.Tk):
+    def __init__(self):
+        super().__init__()
+        self.title("Ventana general")
+        self.center_window(400,500)
+        self.resizable(False,False)
+        #self.icon()
+        self.init_widgets()
+        
+    def center_window(self,alto,ancho):
+        x = (self.winfo_screenwidth()//2) - (ancho//2)
+        y = (self.winfo_screenheight()//2) - (alto//2)
+        self.geometry(f'{ancho}x{alto}+{x}+{y-25}')
+    
+    def icon(self):
+        icon=tk.PhotoImage(file="icon1.png")
+        self.iconphoto(True,icon)
+    
+    def init_widgets(self):
+        frameTest = tk.Frame(
+            self,
+            bg='red'
+        )
+
+        frameTest.pack(
+            padx=20,
+            pady=20,
+            expand=True,
+            fill='both'
+        )
+
+        tk.Frame(
+            self,
+            bg='blue'
+        ).pack(
+            padx=20,
+            pady=20,
+            expand=True,
+            fill='both'
+        )
+
+        tk.Frame(
+            self,
+            bg='green'
+        ).pack(
+            padx=20,
+            pady=20,
+            expand=True,
+            fill='both'
+        )
+
+        ttk.Button(
+            frameTest,
+            text="Hola"
+        ).pack()
+        ttk.Button(
+            frameTest,
+            text="Hola"
+        ).pack()
+
+win = ventana()
+win.mainloop()
